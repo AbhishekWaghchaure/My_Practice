@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../PW_Skills _End2End_Projects"
+		},
+		{
+			"path": "../PWSkills_Assignments"
+		},
+		{
+			"path": "../PWSkillsDataScience"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Documents/Mtech(DSA)/Projects"
+		},
+		{
+			"path": "../../Documents/Projects"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
