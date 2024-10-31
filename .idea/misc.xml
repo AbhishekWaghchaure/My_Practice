@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="tensor" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="torch-mac" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="stable_env_nlp" project-jdk-type="Python SDK" />
 </project>
