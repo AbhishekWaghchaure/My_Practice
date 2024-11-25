@@ -15,3 +15,14 @@ Output: ['*****', ' *** ', '  *  ']
 Input: 5
 Output: ['*********', ' ******* ', '  *****  ', '   ***   ', '    *    ']
 """
+
+def reverse_pyramid(num):
+    base = num * 2 - 1
+    pattern = []
+    for i in range(num, 0, -1):
+        stars = (2 * i - 1 ) * "*"
+        with_spaces = stars.center(base)
+        pattern.append(with_spaces)
+    return pattern
+
+print("\n".join(reverse_pyramid(5)))
