@@ -22,3 +22,35 @@ def palindrome(string):
     else:
         return False
 print(palindrome('malayalam'))
+
+
+
+def is_palindrome(string):
+    start = 0
+    end = len(string) - 1
+
+    while True:
+        if start > end:  # Stop condition when pointers cross
+            break
+        if string[start] != string[end]:  # Compare characters
+            return False
+        start += 1  # Move start forward
+        end -= 1    # Move end backward
+
+    return True
+
+# Test case
+print(is_palindrome("abcdedcba"))  # Output: True
+print(is_palindrome("abccbaaa"))  # Output: False
+
+
+def is_palindrom_for(string):
+    start  = 0
+    end = len(string) - 1
+    
+    for i in range(len(string) // 2):
+        if string[start] != start[end]:
+            return False
+        
+        start += 1
+        end -= 1
