@@ -12,8 +12,9 @@ Input: lst = [29, 10, 14, 37, 13]
 Output: [10, 13, 14, 29, 37]"""
 
 def selection_sort(arr):
-    min = 0
+
     for i in range(0, len(arr)-1):
+        min = i
         for j in range(i + 1 ,(len(arr))):
             if arr[j] < arr[min]:
                 min = j
