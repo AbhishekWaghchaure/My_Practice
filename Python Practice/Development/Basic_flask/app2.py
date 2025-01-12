@@ -1,4 +1,5 @@
 from flask import Flask,redirect,url_for,render_template
+from employee import emp
 
 app = Flask(__name__)
 
@@ -29,6 +30,19 @@ def score(name, num):
         return redirect(url_for('passed', sname = name, marks = num))
     else:
         return redirect(url_for('fail', sname = name, marks = num))
+    
+@app.route('/evaluate/<int:num>')
+def evaluate(num):
+    return render_template('evaluate.html', title = 'Evaluate',
+                           number = num)
+    
+@app.route('/employee')
+def employee():
+    return render_template('employee.html', title = 'Employee', employee = emp)
+
+@app.route('/employee/managers')
+def managers():
+    return render_template('manager.html', title = 'Managers', employee = emp)
 
 if __name__ == '__main__':
     app.run(debug = True)
