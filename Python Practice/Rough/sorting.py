@@ -28,3 +28,18 @@ def selection_sort(arr):
 
 array = [10,30,20,29,9,15]
 print(selection_sort(array))
+
+
+
+## Insertion sort
+
+def insertion_sort(arr):
+    len = len(arr)
+    
+    for i in range(0, len):
+        sorted = arr[0]
+        for j in range(1, len):
+            if arr[j] < arr[sorted]:
+                sorted = arr[j]
+                j = j - 1
+                

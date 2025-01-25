@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action = '', method = "post">
+    {{form.hidden_tag()}}
+    <div>
+        {{form.user_name.label}}
+        {{form.user_name}}
+
+        {% if form.user_name.errors %}
+            {% for error in form.user_name%}
+            <div>
+                {{error}}
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.email.label}}
+        {{form.email}}
+        {% if form.user_name.errors %}
+            {% for error in form.user_name%}
+            <div>
+                {{error}}
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.gender.label}}
+        {{form.gender}}
+        {% if form.gender.errors %}
+            {% for error in form.gender%}
+            <div>
+                {{error}}
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.dob.label}}
+        {{form.dob}}
+        {% if form.dob.errors %}
+            {% for error in form.dob%}
+            <div>
+                {{error}}
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.password.label}}
+        {{form.password}}
+        {% if form.password.errors %}
+            {% for error in form.password%}
+            <div>
+                {{error}}
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.confirm_password.label}}
+        {{form.confirm_password}}
+        {% if form.confirm_password.errors %}
+            {% for error in form.confirm_password%}
+            <div>
+                {{error}}
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.submit}}
+    </div>
+    <br>
+</form>
+{% endblock content %}
